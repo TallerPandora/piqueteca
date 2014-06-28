@@ -25,6 +25,9 @@ class Licencia(models.Model):
 class Categoria(models.Model):
     nombre = models.CharField(max_length=200)
 
+class Tipo(models.Model):
+    tipo = models.CharField(max_length = 200)
+
 class Libro(models.Model):
     titulo = models.CharField(max_length=200)
     autora = models.ManyToManyField(Autora)
@@ -35,6 +38,7 @@ class Libro(models.Model):
     enlace_descarga = models.CharField(max_length=200, null=True, blank=True)
     estado = models.ForeignKey(Estado_libro)
     licencia = models.ForeignKey(Licencia)
+    tipo = models.ForeignKey(Tipo)
 
 class Prestamos(models.Model):
     libros = models.ManyToManyField(Libro)
