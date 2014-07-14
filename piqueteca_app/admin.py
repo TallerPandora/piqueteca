@@ -2,7 +2,7 @@ from django.contrib import admin
 from piqueteca_app.models import *
 
 class LibroAdmin(admin.ModelAdmin):
-    list_display = ['titulo']
+    list_display = ['titulo', 'get_autoras']
 
 class AutoraAdmin(admin.ModelAdmin):
     list_display = ['nombre', 'apellido']
