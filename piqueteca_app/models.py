@@ -41,6 +41,14 @@ class Libro(models.Model):
     licencia = models.ForeignKey(Licencia)
     tipo = models.ForeignKey(Tipo)
 
+    def get_autoras(self):
+        autoras = Libro.objects.get(id=self.id).autora.all()
+        lista_autoras = ""
+        for autora in autoras:
+            lista_autoras += autora.nombre + " " + autora.apellido + " | "
+        return lista_autoras
+    get_autoras.short_description = 'Autor/a'
+
 class Prestamos(models.Model):
     libros = models.ManyToManyField(Libro)
     lectora = models.ForeignKey(Lectora)
