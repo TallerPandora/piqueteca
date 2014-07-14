@@ -2,6 +2,7 @@ from django.db import models
 
 class Autora(models.Model):
     nombre = models.CharField(max_length=200)
+    apellido = models.CharField(max_length=200)
     contacto = models.CharField(max_length=200, null=True, blank=True)
 
 class Lectora(models.Model):
