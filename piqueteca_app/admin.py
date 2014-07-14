@@ -1,8 +1,14 @@
 from django.contrib import admin
 from piqueteca_app.models import *
 
-admin.site.register(Libro)
-admin.site.register(Autora)
+class LibroAdmin(admin.ModelAdmin):
+    list_display = ['titulo']
+
+class AutoraAdmin(admin.ModelAdmin):
+    list_display = ['nombre', 'apellido']
+
+admin.site.register(Libro, LibroAdmin)
+admin.site.register(Autora, AutoraAdmin)
 admin.site.register(Lectora)
 admin.site.register(Estado_libro)
 admin.site.register(Estado_prestamo)
