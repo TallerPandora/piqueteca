@@ -1,7 +1,6 @@
 Modelos de datos del programa
 
 Libro
-- id
 - Titulo
 - Autor@ (m2m)
 - Año de edicion
@@ -13,17 +12,16 @@ Libro
 - prestado
 
 Categoria
-- id
 - Nombre
 
 Autora
-- id
 - nombre
-- correo electronico
+- apellido
+- contacto
 
 Lectora
-- id 
 - nombre
+- apellido
 - correo electronico
 - telefono
 
