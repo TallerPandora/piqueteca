@@ -31,6 +31,7 @@ class Estado_prestamo(models.Model):
 
 class Editorial(models.Model):
     nombre = models.CharField(max_length=200)
+    ubicacion = models.CharField(max_length=200, null=True, blank=True)
     contacto = models.CharField(max_length=200)
 
     def __unicode__(self):
