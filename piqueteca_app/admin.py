@@ -4,11 +4,12 @@ from piqueteca_app.models import *
 class LibroAdmin(admin.ModelAdmin):
     list_display = ['titulo', 'get_autoras']
 
-class AutoraAdmin(admin.ModelAdmin):
-    list_display = ['nombre', 'apellido']
+#class AutoraAdmin(admin.ModelAdmin):
+    #list_display = ['nombre', 'apellido']
 
 admin.site.register(Libro, LibroAdmin)
-admin.site.register(Autora, AutoraAdmin)
+#admin.site.register(Autora, AutoraAdmin)
+admin.site.register(Autora)
 admin.site.register(Lectora)
 admin.site.register(Estado_libro)
 admin.site.register(Estado_prestamo)
