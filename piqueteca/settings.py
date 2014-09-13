@@ -60,7 +60,7 @@ WSGI_APPLICATION = 'piqueteca.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'base',
+        'NAME': os.path.join(BASE_DIR, 'db/base.sqlite3'),
     }
 }
 
