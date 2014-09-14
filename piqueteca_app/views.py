@@ -2,8 +2,13 @@ from django.shortcuts import render, render_to_response
 from django.template import RequestContext
 from piqueteca_app.forms import UserForm, UserProfileForm
 from django.http import HttpResponse
+import os
+
+PIQUETECA_PROJECT_PATH = os.path.dirname(__file__)
+
 def register(request):
-    # Like before, get the request's context.
+    import pdb; pdb.set_trace()
+    # get the request's context.
     context = RequestContext(request)
 
     # A boolean value for telling the template whether the registration was successful.
@@ -14,6 +19,7 @@ def register(request):
     if request.method == 'POST':
         # Attempt to grab information from the raw form information.
         # Note that we make use of both UserForm and UserProfileForm.
+        import pdb; pdb.set_trace() 
         user_form = UserForm(data=request.POST)
         profile_form = UserProfileForm(data=request.POST)
 
@@ -58,6 +64,7 @@ def register(request):
 
     # Render the template depending on the context.
     return render_to_response(
-            'piqueteca_app/register.html',
+            os.path.join(PIQUETECA_PROJECT_PATH,
+                                '../piqueteca_app/templates/register.html'),
             {'user_form': user_form, 'profile_form': profile_form, 'registered': registered},
             context)
