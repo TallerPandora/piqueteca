@@ -1,4 +1,4 @@
-from piqueteca_app.models import UserProfile
+from piqueteca_app.models import UserProfile, Lectora
 from django.contrib.auth.models import User
 from django import forms
 
@@ -12,5 +12,6 @@ class UserForm(forms.ModelForm):
 
 class UserProfileForm(forms.ModelForm):
     class Meta:
-        model = UserProfile
-        fields = ('website',)
+        model = Lectora
+        #fields = ('website',)
+

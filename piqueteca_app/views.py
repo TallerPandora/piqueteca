@@ -18,7 +18,6 @@ def register(request):
     if request.method == 'POST':
         # Attempt to grab information from the raw form information.
         # Note that we make use of both UserForm and UserProfileForm.
-        import pdb; pdb.set_trace() 
         user_form = UserForm(data=request.POST)
         profile_form = UserProfileForm(data=request.POST)
 
