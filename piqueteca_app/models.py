@@ -89,13 +89,3 @@ class Prestamos(models.Model):
     def __unicode__(self):
         return u'%s' % (self.libros)
 
-class UserProfile(models.Model):
-    # This line is required. Links UserProfile to a User model instance.
-    user = models.ForeignKey(User)
-
-    # The additional attributes we wish to include.
-    website = models.URLField(blank=True)
-
-    # Override the __unicode__() method to return out something meaningful!
-    def __unicode__(self):
-        return self.user.username
