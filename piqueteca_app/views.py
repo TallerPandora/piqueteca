@@ -7,7 +7,6 @@ import os
 PIQUETECA_PROJECT_PATH = os.path.dirname(__file__)
 
 def register(request):
-    import pdb; pdb.set_trace()
     # get the request's context.
     context = RequestContext(request)
 
