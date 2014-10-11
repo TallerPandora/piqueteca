@@ -1,6 +1,6 @@
 from django.contrib import admin
 from piqueteca_app.models import *
-from piqueteca_app.models import UserProfile
+#from piqueteca_app.models import UserProfile
 
 class LibroAdmin(admin.ModelAdmin):
     list_display = ['titulo', 'get_autoras']
@@ -19,4 +19,4 @@ admin.site.register(Licencia)
 admin.site.register(Categoria)
 admin.site.register(Tipo)
 admin.site.register(Prestamos)
-admin.site.register(UserProfile)
+#admin.site.register(UserProfile)
