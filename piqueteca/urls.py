@@ -10,5 +10,6 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^register/$', 'piqueteca_app.views.register', name='register'), # ADD NEW PATTERN!
-    url(r'^piqueteca_app/register/$', 'piqueteca_app.views.register', name='registers')
+    url(r'^piqueteca_app/register/$', 'piqueteca_app.views.register', name='registers'),
+    url(r'/', 'piqueteca_app.views.inicio', name='inicio')
 )

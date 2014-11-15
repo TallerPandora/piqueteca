@@ -66,3 +66,9 @@ def register(request):
                                 '../piqueteca_app/templates/register.html'),
             {'user_form': user_form, 'profile_form': profile_form, 'registered': registered},
             context)
+
+
+def inicio(request):
+    return render_to_response(
+        os.path.join(PIQUETECA_PROJECT_PATH, '../piqueteca_app/templates/inicio.html'), context
+        )
