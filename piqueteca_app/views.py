@@ -70,5 +70,7 @@ def register(request):
 
 def inicio(request):
     return render_to_response(
-        os.path.join(PIQUETECA_PROJECT_PATH, '../piqueteca_app/templates/inicio.html'), context
+        os.path.join(PIQUETECA_PROJECT_PATH, '../piqueteca_app/templates/inicio.html'), 
+        {'url_prestamo':"/admin/piqueteca_app/prestamos/", 'url_registrar':"/registrar"} 
+
         )
