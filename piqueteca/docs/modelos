@@ -1,0 +1,34 @@
+Modelos de datos del programa
+
+Libro
+- Titulo
+- Autor@ (m2m)
+- Año de edicion
+- Licencia
+- Editorial
+- Contratapa / Reseña
+- Categoria (m2m)
+- Enlace de descarga
+- prestado
+
+Categoria
+- Nombre
+
+Autora
+- nombre
+- apellido
+- contacto
+
+Lectora
+- nombre
+- apellido
+- correo electronico
+- telefono
+
+Prestamos
+- id
+- id_libro (muchos)
+- id_lectora
+- fecha prestamo
+- fecha devolucion
+- estado
