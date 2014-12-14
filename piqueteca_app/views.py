@@ -63,19 +63,19 @@ def register(request):
     # Render the template depending on the context.
     return render_to_response(
             os.path.join(PIQUETECA_PROJECT_PATH,
-                                '../piqueteca_app/templates/register.html'),
+                                'templates/register.html'),
             {'user_form': user_form, 'profile_form': profile_form, 'registered': registered},
             context)
 
 
 def inicio(request):
     return render_to_response(
-        os.path.join(PIQUETECA_PROJECT_PATH, '../piqueteca_app/templates/inicio.html'),
-        {'url_prestamo':"/admin/piqueteca_app/prestamos/", 'url_registrar':"/registrar"}
+        os.path.join(PIQUETECA_PROJECT_PATH, 'templates/inicio.html'),
+        {'url_prestamo':"/admin/piqueteca_app/prestamos/", 'url_registrar':"/register"}
         )
 
-def inicioexterno(request):
+def externo(request):
     return render_to_response(
-        os.path.join(PIQUETECA_PROJECT_PATH, '../piqueteca_app/templates/inicioexterno.html'),
-        {'url_registrar':"/registrar"}
+        os.path.join(PIQUETECA_PROJECT_PATH, 'templates/externo.html'),
         )
+
